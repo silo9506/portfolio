@@ -17,6 +17,7 @@
     "styled-reset": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
+  "homepage": "https://silo9506.github.io/portfolio/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
