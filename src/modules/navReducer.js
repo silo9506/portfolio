@@ -8,11 +8,9 @@ const navReducer = createSlice({
   initialState,
   reducers: {
     onToggle: (state, actions) => {
-      console.log("아");
       state.toggle = !state.toggle;
     },
     setMaxPage: (state, actions) => {
-      console.log(actions.payload);
       state.maxPage = actions.payload;
     },
     onThrottle: (state, actions) => {

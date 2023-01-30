@@ -42,23 +42,6 @@ const Home = () => {
           Hyeon Chul's{"\n"}Portfolio
         </After>
       </Title>
-      {/* <div className="textBox">
-        {title.split("").map((text, index) => {
-          if (text === "P") {
-            return (
-              <Fragment key={index}>
-                <br />
-                <Text index={index}>{text}</Text>
-              </Fragment>
-            );
-          }
-          return (
-            <Text key={index} index={index}>
-              {text}
-            </Text>
-          );
-        })}
-      </div> */}
       <Arrowbox>
         <span>스크롤</span>
         <ArrowDown />
@@ -86,16 +69,11 @@ const arrowBounce = keyframes`
   }`;
 
 const Container = styled.div`
-  background-color: #1a1a1a;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
-  .textBox {
-    width: 100%;
-    text-align: center;
-  }
 `;
 
 const Title = styled.h1.attrs(({ skew }) => ({
@@ -113,7 +91,6 @@ const Title = styled.h1.attrs(({ skew }) => ({
     position: absolute;
     top: 0;
     transition: clip-path 50ms ease-in;
-    background-color: #1a1a1a;
   }
 `;
 const Before = styled.span.attrs(({ top1, btm1 }) => ({

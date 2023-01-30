@@ -18,10 +18,19 @@ const Sidebar = ({ toggle, maxPage, change, curPage }) => {
             </div>
           </SlideingBox>
           <div className="navbox">
-            <div>Home</div>
-            <div>About</div>
-            <div>Project</div>
-            <div>Contact</div>
+            {Array.from(Array(maxPage), (x, index) => (
+              <NavBtn
+                key={index}
+                active={index === curPage}
+                index={index}
+                onClick={() => change(index)}
+              >
+                {index === 0 && "Home"}
+                {index === 1 && "About"}
+                {index === 2 && "Project"}
+                {/* {index === 3 && "Contact"} */}
+              </NavBtn>
+            ))}
           </div>
         </div>
       ) : (
@@ -83,11 +92,14 @@ const Container = styled.div`
       align-items: center;
       justify-content: center;
       flex: 1;
-      div {
-        flex: 1;
-      }
     }
   }
+`;
+const NavBtn = styled.div`
+  padding: 1rem;
+  color: ${({ active }) => active && "#eb4a4c"};
+  cursor: pointer;
+  font-weight: bold;
 `;
 
 const MiniSidebar = styled.div`

@@ -25,8 +25,6 @@ const App = () => {
     init();
   }, [toggle, curPage]);
 
-  useEffect(() => {}, []);
-
   useEffect(() => {
     dispatch(setMaxPage(sections.current.children.length));
   }, [setMaxPage, dispatch]);
@@ -34,10 +32,13 @@ const App = () => {
   const init = () => {
     if (curPage !== 0 && curPage !== maxPage - 1) {
       let num = 1;
+      console.log(curPage);
       while (num <= curPage) {
         sections.current.children[curPage - num].classList.add("scroll-down");
+        sections.current.children[curPage].classList.remove("scroll-down");
         num++;
       }
+      num = 1;
     }
     if (curPage === 0) {
       let num = 0;
@@ -47,24 +48,23 @@ const App = () => {
         );
         num++;
       }
+      num = 0;
     }
 
     if (curPage === maxPage - 1) {
       let num = 1;
       while (num < maxPage) {
-        console.log(num);
         sections.current.children[curPage - num].classList.add("scroll-down");
         num++;
       }
+      num = 1;
     }
   };
 
   const scrollDown = () => {
     if (curPage < maxPage - 1) {
       let CURPAGE = curPage + 1;
-      console.log(CURPAGE);
       dispatch(onScroll(CURPAGE));
-
       sections.current.children[CURPAGE - 1].classList.add("scroll-down");
       CURPAGE = null;
     }
@@ -73,8 +73,6 @@ const App = () => {
   const scrollUp = () => {
     if (curPage !== 0) {
       let CURPAGE = curPage - 1;
-      console.log(CURPAGE);
-
       dispatch(onScroll(CURPAGE));
       sections.current.children[CURPAGE].classList.remove("scroll-down");
     }
@@ -138,6 +136,7 @@ export default App;
 const Container = styled.div`
   perspective: 1px;
   height: 100vh;
+  /* background-color: #1a1a1a; */
   overflow: hidden;
 `;
 
@@ -153,43 +152,51 @@ const Background = styled.section`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+
   & .content {
     height: 100vh;
     width: 100%;
     transition: all 1s cubic-bezier(0.22, 0.44, 0, 1);
-    transform: translateY(40vh);
-    padding-left: ${({ toggle }) => toggle && "15rem"};
+    transform: translateY(80vh);
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-left: ${({ toggle }) => (toggle ? "15rem" : "70px")};
+    padding-right: 70px;
   }
 
   &:first-child {
-    background-color: #1a1a1a;
     transform: translateY(-15vh);
+    background-color: #1a1a1a;
     z-index: 10;
     .content {
       transform: translateY(15vh);
     }
   }
   &:nth-child(2) {
-    background-color: #2b2b2b;
     z-index: 9;
+    background: linear-gradient(to top, #1a1a1a 0%, #382d21 32%, #04343a 100%);
   }
 
   &:nth-child(3) {
     z-index: 8;
-    background-color: #343a40;
+    /* background-color: #343a40; */
+    background: linear-gradient(
+      to right,
+      rgba(36, 31, 31, 1) 0%,
+      rgba(36, 31, 31, 1) 32%,
+      rgba(74, 71, 70, 1) 100%
+    );
   }
 
   &.scroll-down {
     transform: translateY(-130vh);
-    transform: translateY(-131vh);
+    /* transform: translateY(-131vh); */
   }
 
   &.scroll-down > .content {
-    transform: translateY(40vh);
-    transform: translateY(30vh);
+    transform: translateY(20vh);
+    /* transform: translateY(30vh); */
   }
 
   &.scroll-down + &:not(.scroll-down) {

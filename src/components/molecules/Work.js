@@ -12,11 +12,11 @@ const Work = ({ works }) => {
       </Description>
       <Description>
         <div className="label">GitHub</div>
-        <div>{works.git}</div>
+        <a href={works.git}>{works.git}</a>
       </Description>
       <Description>
         <div className="label">URL</div>
-        <div>{works.url}</div>
+        <a href={works.url}>{works.url}</a>
       </Description>
       <Description>
         <div className="label">SKILL</div>
@@ -39,20 +39,25 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 0;
+  padding: 20px 20px;
 `;
 
 const Img = styled.img`
-  width: 80%;
-  height: 200px;
+  width: 100%;
+  height: 400px;
   margin: 20px 0;
+  border-radius: 15px;
 `;
 
 const Description = styled.div`
-  width: 80%;
+  width: 100%;
   margin: auto;
   font-size: 1rem;
+  text-align: center;
   display: flex;
+  & > * {
+    width: 100%;
+  }
   .label {
     font-weight: 900;
     width: 9rem;

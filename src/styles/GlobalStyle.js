@@ -21,6 +21,10 @@ const GlobalStyle = createGlobalStyle`
 *{
   box-sizing: border-box;
 }
+a{
+  color:unset;
+  text-decoration: unset;
+}
 `;
 
 export default GlobalStyle;

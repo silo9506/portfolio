@@ -14,6 +14,7 @@ export default Skills;
 
 const Container = styled.div`
   display: flex;
+  justify-content: center;
 `;
 const Icon = styled.div`
   background-image: ${({ icon }) => `url(${icon})`};

@@ -56,6 +56,17 @@ const work = [
     },
   },
   {
+    img: fullpage,
+    git: "https://github.com/silo9506/react-page",
+    url: "https://silo9506.github.io/react-page/",
+    Description: {
+      title: "서울 동물복지지원센터",
+      Objectives: "오픈api활용, 라이브러리 사용,",
+      Feature: "웹 페이지 구성 및 스크롤을 통한 페이지 이동",
+      skill: [html, css, js, react, redux],
+    },
+  },
+  {
     img: todo,
     url: "https://silo9506.github.io/todo-js/",
     git: "https://github.com/silo9506/todo-js",
@@ -97,6 +108,17 @@ const work = [
       Objectives: "api활용, redux활용",
       Feature: "동영상 검색 및 시청",
       skill: [html, css, js, redux, react],
+    },
+  },
+  {
+    img: fullpage,
+    git: "https://github.com/silo9506/react-page",
+    url: "https://silo9506.github.io/react-page/",
+    Description: {
+      title: "서울 동물복지지원센터",
+      Objectives: "오픈api활용, 라이브러리 사용,",
+      Feature: "웹 페이지 구성 및 스크롤을 통한 페이지 이동",
+      skill: [html, css, js, react, redux],
     },
   },
   {
@@ -181,7 +203,7 @@ const carouselSlice = createSlice({
         state.counte = 0;
         state.trans = false;
       } else {
-        state.counte = state.max;
+        state.counte = state.max - 1;
         state.trans = false;
       }
     },

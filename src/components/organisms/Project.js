@@ -4,46 +4,104 @@ import { ReactComponent as ArrowRight } from "assets/svg/arrow-right.svg";
 import { ReactComponent as ArrowLeft } from "assets/svg/arrow-left.svg";
 import { carouselActions } from "modules/carouselReducer";
 import Work from "components/molecules/Work";
+import { useState } from "react";
 
-const Project = () => {
+const Introduce = () => {
+  const [transX, setTransX] = useState(0);
+  const [start, setStart] = useState(0);
+  const [isDrag, setIsDrag] = useState(false);
   const { counte, max, trans, work } = useSelector(
     (state) => state.carouselReducer
   );
-  console.log(counte);
   const dispatch = useDispatch();
   const { carouselMove, carouselLastMove } = carouselActions;
 
   const onClickUp = (e) => {
     dispatch(carouselMove("up"));
-    setTimeout(() => {
-      e.target.disabled = false;
-    }, 300);
-
+    if (e !== null) {
+      setTimeout(() => {
+        e.target.disabled = false;
+      }, 300);
+      e.target.disabled = true;
+    }
     if (counte === max - 1) {
       setTimeout(() => {
         dispatch(carouselLastMove("up"));
       }, 300);
     }
-    e.target.disabled = true;
   };
 
   const onClickDown = (e) => {
     dispatch(carouselMove("down"));
-    setTimeout(() => {
-      e.target.disabled = false;
-    }, 300);
+    if (e !== null) {
+      setTimeout(() => {
+        e.target.disabled = false;
+      }, 300);
+      e.target.disabled = true;
+    }
     if (counte === 0) {
       setTimeout(() => {
         dispatch(carouselLastMove("down"));
       }, 300);
     }
-    e.target.disabled = true;
+  };
+
+  const onMouseDown = (e) => {
+    e.preventDefault();
+    let pageX = e.pageX;
+    setIsDrag(true);
+    setStart(pageX);
+    pageX = null;
+  };
+
+  const onMouseLeave = (e) => {
+    if (transX > 200) {
+      // console.log("200보다 큼");
+      onClickDown(null);
+    }
+    if (transX < -200) {
+      // console.log("200보다 작음");
+      onClickUp(null);
+    }
+    e.preventDefault();
+    setIsDrag(false);
+    setTransX(0);
+  };
+
+  const onMouseUp = (e) => {
+    if (transX > 150) {
+      // console.log("200보다 큼");
+      onClickDown(null);
+    }
+    if (transX < -150) {
+      // console.log("200보다 작음");
+      onClickUp(null);
+    }
+    e.preventDefault();
+    setIsDrag(false);
+    setTransX(0);
+  };
+
+  const onMouseMove = (e) => {
+    if (!isDrag) return;
+    let pageX = -start + e.pageX;
+    setTransX(pageX);
+    pageX = null;
   };
 
   return (
     <Container>
       <CarouselWrapper>
-        <Carousel max={max} counter={counte} trans={trans}>
+        <Carousel
+          max={max}
+          counter={counte}
+          trans={trans}
+          transX={transX}
+          onMouseDown={onMouseDown}
+          onMouseLeave={onMouseLeave}
+          onMouseUp={onMouseUp}
+          onMouseMove={onMouseMove}
+        >
           {work.map((works, index) => (
             <Work key={index} works={works} />
           ))}
@@ -60,13 +118,16 @@ const Project = () => {
 };
 
 const Container = styled.div`
-  max-width: 40rem;
-  height: 70%;
+  /* max-width: 40rem; */
+  height: 80%;
+  border-radius: 10%;
+  width: calc(100% - 20%);
   position: relative;
-  background-color: skyblue;
+  background-color: #453b36;
 `;
 const CarouselWrapper = styled.div`
-  width: 100%;
+  /* width: 100%; */
+  /* max-width: 40rem; */
   height: 100%;
   overflow: hidden;
 `;
@@ -76,7 +137,8 @@ const Carousel = styled.div`
   height: 100%;
   display: flex;
   transition: ${({ trans }) => trans && "0.3s"};
-  transform: ${({ max, counter }) => `translateX(-${(counter + max) * 100}%)`};
+  transform: ${({ max, counter, transX }) =>
+    `translateX(calc(-${(counter + max) * 100}% + ${transX}px))`};
 `;
 
 const Btnwrapper = styled.div`
@@ -92,4 +154,4 @@ const Btnwrapper = styled.div`
   }
 `;
 
-export default Project;
+export default Introduce;
