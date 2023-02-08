@@ -118,10 +118,11 @@ const Introduce = () => {
 };
 
 const Container = styled.div`
-  /* max-width: 40rem; */
+  max-width: 700px;
+  width: 35rem;
   height: 80%;
+  margin: 0 auto;
   border-radius: 10%;
-  width: calc(100% - 20%);
   position: relative;
   background-color: #453b36;
 `;
@@ -148,8 +149,8 @@ const Btnwrapper = styled.div`
   transform: translatey(-50%);
   left: ${({ left }) => (left ? "-10%" : "unset")};
   svg {
-    width: 60px;
-    height: 60px;
+    width: 3rem;
+    height: 3rem;
     fill: #ff6363;
   }
 `;

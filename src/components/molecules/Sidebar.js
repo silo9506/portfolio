@@ -70,8 +70,7 @@ const Container = styled.div`
     top: 0;
     bottom: 0;
     z-index: 100;
-    width: 300px;
-    width: 15rem;
+    width: 12.5rem;
     display: flex;
     align-items: center;
     background-color: #212529;
@@ -84,7 +83,7 @@ const Container = styled.div`
       border-radius: 50%;
     }
     .name {
-      font-size: 24px;
+      font-size: 1rem;
     }
     .navbox {
       display: flex;
@@ -135,7 +134,7 @@ const MiniNavBtn = styled.div`
 const SlideingBox = styled.div`
   padding: 10px 0;
   .fixed {
-    font-size: 14px;
+    font-size: 0.8rem;
     /* font-size: 40px; */
     color: #fff;
     font-weight: bold;
@@ -144,15 +143,15 @@ const SlideingBox = styled.div`
     justify-content: center;
   }
   .moving {
-    height: 14px;
+    height: 0.8rem;
     overflow: hidden;
     margin-bottom: 0.5px;
     padding-right: 5px;
     div {
-      height: 14px;
+      height: 0.8rem;
       width: fit-content;
       color: #eb4a4c;
-      margin-bottom: 14px;
+      margin-bottom: 0.8rem;
     }
     & :first-child {
       animation: ${slide} 5s linear infinite;

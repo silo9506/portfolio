@@ -80,7 +80,7 @@ const About = () => {
               </tr>
               <tr>
                 <td>Email</td>
-                <td>eyeless356@naver.com</td>
+                <td>silo9506@gmail.com</td>
               </tr>
             </tbody>
           </table>
@@ -104,15 +104,9 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background: linear-gradient(
-    to right,
-    rgba(36, 31, 31, 1) 0%,
-    rgba(36, 31, 31, 1) 32%,
-    rgba(74, 71, 70, 1) 100%
-  ); */
   color: #fff;
-
   .shadow {
+    left: 0;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -125,55 +119,61 @@ const Gridbox = styled.div`
   border-radius: 50%;
   position: relative;
   display: grid;
-  color: #000;
+  grid-template-columns: repeat(2, 50%);
   color: white;
   font-family: "Bellefair", serif;
-  padding: 100px 50px;
-  max-width: 40rem;
   height: 70%;
-  grid-gap: 20px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  width: 100%;
+  max-width: 700px;
+  height: 50%;
+  grid-gap: 2rem;
   .circle-1 {
+    max-width: 650px;
     border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
     position: absolute;
-    top: 0;
+    top: -15%;
     left: 0;
-    bottom: 0;
     right: 0;
+    bottom: -15%;
     background: #4c4e33;
-    animation: ${spin} 5s infinite linear;
+    animation: ${spin} 6s infinite linear;
     z-index: 2;
   }
   .circle-2 {
+    max-width: 650px;
     border-radius: 80% 30% 50% 50%/50%;
     position: absolute;
-    top: 0;
+    top: -15%;
     left: 0;
-    bottom: 0;
+    bottom: -15%;
     right: 0;
     background: #897171;
-    animation: ${spin} 5s infinite linear;
+    animation: ${spin} 6.5s infinite linear;
     z-index: 2;
   }
   .circle-3 {
+    max-width: 650px;
     background: #d19f9f;
     border-radius: 40% 40% 50% 40%/30% 50% 50% 50%;
     position: absolute;
-    top: 0;
+    top: -15%;
     left: 0;
-    bottom: 0;
+    bottom: -15%;
     right: 0;
-    animation: ${spin} 6s infinite linear;
+    animation: ${spin} 7s infinite linear;
     z-index: 2;
   }
 `;
 
 const Category = styled.div`
   display: flex;
+  justify-content: center;
   flex-direction: column;
+  width: 100%;
+  height: 100%;
   z-index: 3;
-  font-size: 15px;
+  font-size: 0.8rem;
+
   ul {
     list-style: circle;
     padding: 0 20px;
@@ -183,23 +183,27 @@ const Category = styled.div`
   }
   table {
     width: fit-content;
+    width: 100%;
+
     td {
-      min-width: 80px;
-      max-width: fit-content;
-      text-align: start;
       padding: 2.5px 0;
+    }
+    td + td {
+      word-break: break-all;
+      padding-left: 5px;
+      text-align: center;
     }
   }
   .skillIcon {
-    width: 40px;
-    height: 40px;
+    width: 2rem;
+    height: 2rem;
   }
 `;
 
 const Title = styled.div`
   display: flex;
   align-items: center;
-  font-size: 18px;
+  font-size: 1rem;
   margin: 10px 0;
   svg {
     fill: white;

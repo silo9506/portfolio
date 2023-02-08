@@ -18,6 +18,16 @@ const GlobalStyle = createGlobalStyle`
   --slide-number: 3;
   
 }
+html{
+  font-size:24px;
+
+  @media screen and (max-width: 1300px) {
+    font-size:20px;
+    }
+    @media screen and (max-width: 700px) {
+      font-size:13px;
+      }
+}
 *{
   box-sizing: border-box;
 }

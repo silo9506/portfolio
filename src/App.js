@@ -161,8 +161,8 @@ const Background = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: ${({ toggle }) => (toggle ? "15rem" : "70px")};
-    padding-right: 70px;
+    padding-left: ${({ toggle }) => (toggle ? "12.5rem" : "70px")};
+    /* padding-right: 70px; */
   }
 
   &:first-child {
@@ -216,12 +216,13 @@ const ToggleBtn = styled.div`
   position: absolute;
   cursor: pointer;
   top: 0px;
-  left: ${({ toggle }) => (toggle ? 12 : 0)}rem;
+  left: ${({ toggle }) => (toggle ? 10 : 0)}rem;
   transform: ${({ toggle }) => toggle && `translateX(-50%)`};
   z-index: 102;
-  width: 30px;
-  height: 30px;
-  margin: 20px;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 20px;
+  margin-left: 20px;
   svg {
     fill: white;
     width: 100%;

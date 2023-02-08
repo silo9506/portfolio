@@ -73,6 +73,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
+  font-size: 4rem;
   height: 100%;
 `;
 
@@ -81,7 +82,6 @@ const Title = styled.h1.attrs(({ skew }) => ({
     transform: `skew(${skew}deg)`,
   },
 }))`
-  font-size: 5rem;
   color: #f1f1f1;
   position: relative;
   white-space: pre-wrap;
