@@ -44,7 +44,7 @@ const Container = styled.div`
 
 const Img = styled.img`
   width: 100%;
-  max-height: 350px;
+  max-height: 250px;
   margin: 20px 0;
   border-radius: 15px;
 `;
