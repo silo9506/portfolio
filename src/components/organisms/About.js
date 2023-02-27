@@ -9,10 +9,9 @@ import htmlIcon from "assets/img/html.png";
 import jsIcon from "assets/img/js.png";
 import reactIcon from "assets/img/react.png";
 import reduxIcon from "assets/img/redux.png";
-import { useEffect } from "react";
 
 const About = () => {
-  useEffect(() => {}, []);
+
 
   return (
     <Container>
@@ -64,7 +63,7 @@ const About = () => {
             Introduce
           </Title>
           <ul>
-            <li>123</li>
+            <li>독학으로 부딪혀 보면서 배운 경험을 바탕으로 문제가 직면했을때 어떻게든 해결 하는 개발자가 되겠습니다.</li>
           </ul>
         </Category>
         <Category>
@@ -126,7 +125,6 @@ const Gridbox = styled.div`
   width: 100%;
   max-width: 700px;
   height: 50%;
-  grid-gap: 2rem;
   .circle-1 {
     max-width: 650px;
     border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;

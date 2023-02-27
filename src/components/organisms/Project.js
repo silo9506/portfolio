@@ -125,10 +125,11 @@ const Container = styled.div`
   border-radius: 10%;
   position: relative;
   background-color: #453b36;
+  @media screen and (max-width:600px) {
+    max-width:270px;
+  }
 `;
 const CarouselWrapper = styled.div`
-  /* width: 100%; */
-  /* max-width: 40rem; */
   height: 100%;
   overflow: hidden;
 `;
@@ -145,13 +146,18 @@ const Carousel = styled.div`
 const Btnwrapper = styled.div`
   position: absolute;
   right: ${({ left }) => (left ? "unset" : "-10%")};
+  left: ${({ left }) => (left ? "-10%" : "unset")};
   top: 50%;
   transform: translatey(-50%);
-  left: ${({ left }) => (left ? "-10%" : "unset")};
   svg {
     width: 3rem;
     height: 3rem;
     fill: #ff6363;
+  }
+  @media screen and (max-width:600px) {
+    right: ${({ left }) => (left ? "unset" : "-15%")};
+    left: ${({ left }) => (left ? "-15%" : "unset")};
+
   }
 `;
 

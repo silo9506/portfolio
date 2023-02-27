@@ -47,6 +47,9 @@ const Img = styled.img`
   max-height: 250px;
   margin: 20px 0;
   border-radius: 15px;
+  @media screen and (max-width:600px) {
+   height: 250px;
+  }
 `;
 
 const Description = styled.div`
@@ -61,5 +64,8 @@ const Description = styled.div`
   .label {
     font-weight: 900;
     width: 9rem;
+  }
+  @media screen and (max-width:600px) {
+    font-size:0.5rem
   }
 `;

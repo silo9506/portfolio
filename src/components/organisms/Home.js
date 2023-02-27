@@ -3,7 +3,6 @@ import styled, { keyframes } from "styled-components";
 import { ReactComponent as ArrowDown } from "assets/svg/arrow-down.svg";
 
 const Home = () => {
-  // const title = "Hyeon Chul's Portfolio";
   const savedCallback = useRef();
   const [top1, setTop1] = useState();
   const [top2, setTop2] = useState();
@@ -75,6 +74,9 @@ const Container = styled.div`
   width: 100%;
   font-size: 4rem;
   height: 100%;
+  @media screen and (max-width:380px) {
+    font-size:2rem;
+  }
 `;
 
 const Title = styled.h1.attrs(({ skew }) => ({
@@ -119,7 +121,6 @@ const Arrowbox = styled.div`
   position: absolute;
   bottom: 5%;
   font-size: 15px;
-
   svg {
     margin-top: 45px;
     fill: #ff6363;
@@ -131,19 +132,3 @@ const Arrowbox = styled.div`
 
 export default Home;
 
-// const bounce = keyframes`
-//  100% {
-//     top: -20px;
-//     text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
-//       0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
-//       0 50px 25px rgba(0, 0, 0);
-//   }
-// `;
-/* const Text = styled.span`
-  position: relative;
-  top: 20px;
-  animation: ${bounce} 0.3s ease infinite alternate;
-  font-size: 80px;
-  color: #fff;
-  animation-delay: ${(props) => 0.1 + props.index / 10}s;
-`; */

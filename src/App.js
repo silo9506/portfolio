@@ -32,7 +32,6 @@ const App = () => {
   const init = () => {
     if (curPage !== 0 && curPage !== maxPage - 1) {
       let num = 1;
-      console.log(curPage);
       while (num <= curPage) {
         sections.current.children[curPage - num].classList.add("scroll-down");
         sections.current.children[curPage].classList.remove("scroll-down");
@@ -136,7 +135,6 @@ export default App;
 const Container = styled.div`
   perspective: 1px;
   height: 100vh;
-  /* background-color: #1a1a1a; */
   overflow: hidden;
 `;
 
@@ -162,7 +160,6 @@ const Background = styled.section`
     align-items: center;
     justify-content: center;
     padding-left: ${({ toggle }) => (toggle ? "12.5rem" : "70px")};
-    /* padding-right: 70px; */
   }
 
   &:first-child {
@@ -180,7 +177,6 @@ const Background = styled.section`
 
   &:nth-child(3) {
     z-index: 8;
-    /* background-color: #343a40; */
     background: linear-gradient(
       to right,
       rgba(36, 31, 31, 1) 0%,
@@ -191,12 +187,10 @@ const Background = styled.section`
 
   &.scroll-down {
     transform: translateY(-130vh);
-    /* transform: translateY(-131vh); */
   }
 
   &.scroll-down > .content {
     transform: translateY(20vh);
-    /* transform: translateY(30vh); */
   }
 
   &.scroll-down + &:not(.scroll-down) {

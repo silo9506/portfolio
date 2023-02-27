@@ -135,7 +135,6 @@ const SlideingBox = styled.div`
   padding: 10px 0;
   .fixed {
     font-size: 0.8rem;
-    /* font-size: 40px; */
     color: #fff;
     font-weight: bold;
     display: flex;
