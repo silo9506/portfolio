@@ -11,21 +11,31 @@ const Work = ({ works }) => {
         <div>{works.Description.Objectives}</div>
       </Description>
       <Description>
-        <div className="label">GitHub</div>
-        <a href={works.git}>{works.git}</a>
+        <div className="label">주요기능</div>
+        <div>{works.Description.Feature}</div>
       </Description>
+
       <Description>
         <div className="label">URL</div>
-        <a href={works.url}>{works.url}</a>
+        <div className="urls">
+          <div>
+            <span style={{ fontWeight: 900, color: "lightblue" }}>깃허브</span>{" "}
+            <a target="_blank" href={works.git}>
+              {works.git}
+            </a>
+          </div>
+          <div>
+            <span style={{ fontWeight: 900, color: "lightblue" }}>페이지</span>{" "}
+            <a target="_blank" href={works.url}>
+              {works.url}
+            </a>
+          </div>
+        </div>
       </Description>
       <Description>
         <div className="label">SKILL</div>
         <Skills icons={works.Description.skill} />
       </Description>
-      {/* <div className=""></div>
-      <div>{works.Description.Feature}</div>
-      <Skills icons={works.Description.skill} /> */}
-      {/* <Btns github={works.git} url={works.url}></Btns> */}
     </Container>
   );
 };
@@ -47,8 +57,8 @@ const Img = styled.img`
   max-height: 250px;
   margin: 20px 0;
   border-radius: 15px;
-  @media screen and (max-width:600px) {
-   height: 250px;
+  @media screen and (max-width: 600px) {
+    height: 250px;
   }
 `;
 
@@ -56,8 +66,10 @@ const Description = styled.div`
   width: 100%;
   margin: auto;
   font-size: 1rem;
+  align-items: center;
   text-align: center;
   display: flex;
+  word-break: keep-all;
   & > * {
     width: 100%;
   }
@@ -65,7 +77,18 @@ const Description = styled.div`
     font-weight: 900;
     width: 9rem;
   }
-  @media screen and (max-width:600px) {
-    font-size:0.5rem
+
+  .urls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    div {
+      padding: 5px 0px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 0.5rem;
   }
 `;

@@ -26,9 +26,8 @@ const Sidebar = ({ toggle, maxPage, change, curPage }) => {
                 onClick={() => change(index)}
               >
                 {index === 0 && "Home"}
-                {index === 1 && "About"}
-                {index === 2 && "Project"}
-                {/* {index === 3 && "Contact"} */}
+                {index === 1 && "Project"}
+                {index === 2 && "About"}
               </NavBtn>
             ))}
           </div>
@@ -62,6 +61,9 @@ const slide = keyframes`
   100% {margin-top:0%;}`;
 
 const Container = styled.div`
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
   .sidebar {
     padding: 20px 0px;
     color: white;
@@ -97,8 +99,12 @@ const Container = styled.div`
 const NavBtn = styled.div`
   padding: 1rem;
   color: ${({ active }) => active && "#eb4a4c"};
-  cursor: pointer;
+  cursor: ${({ active }) => (!active ? "pointer" : "unset")};
   font-weight: bold;
+  &:hover {
+    transform: ${({ active }) => (!active ? "scale(1.3)" : "unset")};
+    transition: transform 1s ease-in;
+  }
 `;
 
 const MiniSidebar = styled.div`
@@ -128,6 +134,10 @@ const MiniNavBtn = styled.div`
   background-color: ${({ active }) => active && "#d1a386"};
   & + & {
     margin-top: 20px;
+  }
+  &:hover {
+    transform: scale(1.3);
+    transition: transform ease-in-out 1s;
   }
 `;
 

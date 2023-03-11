@@ -74,6 +74,7 @@ const Carousels = styled.div`
 
 const Btnwrapper = styled.div`
   position: absolute;
+  cursor: pointer;
   right: ${({ left }) => (left ? "unset" : "10%")};
   top: 50%;
   transform: translatey(-50%);

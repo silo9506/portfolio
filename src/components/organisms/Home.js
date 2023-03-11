@@ -74,8 +74,9 @@ const Container = styled.div`
   width: 100%;
   font-size: 4rem;
   height: 100%;
-  @media screen and (max-width:380px) {
-    font-size:2rem;
+  user-select: none;
+  @media screen and (max-width: 380px) {
+    font-size: 2rem;
   }
 `;
 
@@ -131,4 +132,3 @@ const Arrowbox = styled.div`
 `;
 
 export default Home;
-

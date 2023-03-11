@@ -11,11 +11,9 @@ import reactIcon from "assets/img/react.png";
 import reduxIcon from "assets/img/redux.png";
 
 const About = () => {
-
-
   return (
     <Container>
-      <div className="shadow" />
+      {/* <div className="shadow" /> */}
 
       <Gridbox>
         <div className="circle-1"></div>
@@ -43,29 +41,7 @@ const About = () => {
             </tbody>
           </table>
         </Category>
-        <Category>
-          <Title>
-            <Skill />
-            Skill
-          </Title>
-          <div className="iconBox">
-            <img className="skillIcon" alt="skillIcon" src={cssIcon}></img>
-            <img className="skillIcon" alt="skillIcon" src={jsIcon}></img>
-            <img className="skillIcon" alt="skillIcon" src={htmlIcon}></img>
-            <img className="skillIcon" alt="skillIcon" src={firebaseIcon}></img>
-            <img className="skillIcon" alt="skillIcon" src={reactIcon}></img>
-            <img className="skillIcon" alt="skillIcon" src={reduxIcon}></img>
-          </div>
-        </Category>
-        <Category>
-          <Title>
-            <Introduce />
-            Introduce
-          </Title>
-          <ul>
-            <li>독학으로 부딪혀 보면서 배운 경험을 바탕으로 문제가 직면했을때 어떻게든 해결 하는 개발자가 되겠습니다.</li>
-          </ul>
-        </Category>
+
         <Category>
           <Title>
             <Contact />
@@ -84,6 +60,21 @@ const About = () => {
             </tbody>
           </table>
         </Category>
+
+        <Category>
+          <Title>
+            <Skill />
+            Skill
+          </Title>
+          <div className="iconBox">
+            <img className="skillIcon" alt="skillIcon" src={cssIcon}></img>
+            <img className="skillIcon" alt="skillIcon" src={jsIcon}></img>
+            <img className="skillIcon" alt="skillIcon" src={htmlIcon}></img>
+            <img className="skillIcon" alt="skillIcon" src={firebaseIcon}></img>
+            <img className="skillIcon" alt="skillIcon" src={reactIcon}></img>
+            <img className="skillIcon" alt="skillIcon" src={reduxIcon}></img>
+          </div>
+        </Category>
       </Gridbox>
     </Container>
   );
@@ -98,12 +89,14 @@ const spin = keyframes`
 `;
 
 const Container = styled.div`
+  padding: 50px;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
+  /*  */
   .shadow {
     left: 0;
     position: absolute;
@@ -118,7 +111,8 @@ const Gridbox = styled.div`
   border-radius: 50%;
   position: relative;
   display: grid;
-  grid-template-columns: repeat(2, 50%);
+  /* grid-template-columns: repeat(2, 50%); */
+  /* grid-template-rows: repeat(3, 100%); */
   color: white;
   font-family: "Bellefair", serif;
   height: 70%;
@@ -167,6 +161,8 @@ const Category = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
+
   width: 100%;
   height: 100%;
   z-index: 3;
@@ -179,17 +175,21 @@ const Category = styled.div`
       margin-top: 2.5px;
     }
   }
+  .iconBox {
+    margin: 0 auto;
+  }
   table {
-    width: fit-content;
-    width: 100%;
+    /* width: fit-content; */
+    /* width: 100%; */
 
     td {
       padding: 2.5px 0;
     }
     td + td {
       word-break: break-all;
-      padding-left: 5px;
-      text-align: center;
+      padding-left: 24px;
+      padding-bottom: 8px;
+      /* text-align: center; */
     }
   }
   .skillIcon {
@@ -203,6 +203,7 @@ const Title = styled.div`
   align-items: center;
   font-size: 1rem;
   margin: 10px 0;
+  padding-bottom: 8px;
   svg {
     fill: white;
     width: 20px;

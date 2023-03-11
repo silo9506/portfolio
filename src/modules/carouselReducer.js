@@ -13,11 +13,11 @@ import redux from "assets/img/redux.png";
 const work = [
   {
     img: todo,
-    url: "https://silo9506.github.io/todo-js/",
-    git: "https://github.com/silo9506/todo-js",
+    url: "https://silo9506.github.io/mui_todo/",
+    git: "https://github.com/silo9506/mui_todo",
     Description: {
       title: "투두리스트",
-      Objectives: "로컬스토리지 활용",
+      Objectives: "커스텀 훅 활용,mui를 통한 다크모드 구현,타입스크립트 사용 ",
       Feature: "할일 저장 및 완료 표시 및 항목삭제",
       skill: [html, css, js],
     },
@@ -27,8 +27,8 @@ const work = [
     url: "https://silo9506.github.io/movie-api-react/",
     git: "https://github.com/silo9506/movie-api-react",
     Description: {
-      title: "영화검색 사이트",
-      Objectives: "오픈api 활용",
+      title: "Rumble move사이트",
+      Objectives: "오픈api 활용하여 영화 검색 사이트 제작",
       Feature: "장르영화 추천 및 영화검색",
       skill: [html, css, js, react],
     },
@@ -39,7 +39,8 @@ const work = [
     git: "https://github.com/silo9506/insta-react",
     Description: {
       title: "인스타그램",
-      Objectives: "NoSQL DB사용",
+      Objectives:
+        "NoSQL DB사용하여 회원가입 및 게시글 작성기능 만들기하여 회원가입 및 게시글 작성기능 만들기",
       Feature: "회원가입, auth권한을 통한 파일 업로드 및 삭제",
       skill: [html, css, js, react, firebase],
     },
@@ -50,7 +51,8 @@ const work = [
     git: "https://github.com/silo9506/youtube-redux-react",
     Description: {
       title: "유튜브",
-      Objectives: "api활용, redux활용",
+      Objectives:
+        "api를 활용하여 검색 및 동영상 재생사이트 제작, redux를 사용하여 상태관리",
       Feature: "동영상 검색 및 시청",
       skill: [html, css, js, redux, react],
     },
@@ -68,11 +70,11 @@ const work = [
   },
   {
     img: todo,
-    url: "https://silo9506.github.io/todo-js/",
-    git: "https://github.com/silo9506/todo-js",
+    url: "https://silo9506.github.io/mui_todo/",
+    git: "https://github.com/silo9506/mui_todo",
     Description: {
       title: "투두리스트",
-      Objectives: "로컬스토리지 활용",
+      Objectives: "커스텀 훅 활용,mui를 통한 다크모드 구현,타입스크립트 사용 ",
       Feature: "할일 저장 및 완료 표시 및 항목삭제",
       skill: [html, css, js],
     },
@@ -82,8 +84,8 @@ const work = [
     url: "https://silo9506.github.io/movie-api-react/",
     git: "https://github.com/silo9506/movie-api-react",
     Description: {
-      title: "영화검색 사이트",
-      Objectives: "오픈api 활용",
+      title: "Rumble move사이트",
+      Objectives: "오픈api 활용하여 영화 검색 사이트 제작",
       Feature: "장르영화 추천 및 영화검색",
       skill: [html, css, js, react],
     },
@@ -94,7 +96,7 @@ const work = [
     git: "https://github.com/silo9506/insta-react",
     Description: {
       title: "인스타그램",
-      Objectives: "NoSQL DB사용",
+      Objectives: "NoSQL DB사용하여 회원가입 및 게시글 작성기능 만들기",
       Feature: "회원가입, auth권한을 통한 파일 업로드 및 삭제",
       skill: [html, css, js, react, firebase],
     },
@@ -105,7 +107,8 @@ const work = [
     git: "https://github.com/silo9506/youtube-redux-react",
     Description: {
       title: "유튜브",
-      Objectives: "api활용, redux활용",
+      Objectives:
+        "api를 활용하여 검색 및 동영상 재생사이트 제작, redux를 사용하여 상태관리",
       Feature: "동영상 검색 및 시청",
       skill: [html, css, js, redux, react],
     },
@@ -123,11 +126,11 @@ const work = [
   },
   {
     img: todo,
-    url: "https://silo9506.github.io/todo-js/",
-    git: "https://github.com/silo9506/todo-js",
+    url: "https://silo9506.github.io/mui_todo/",
+    git: "https://github.com/silo9506/mui_todo",
     Description: {
       title: "투두리스트",
-      Objectives: "로컬스토리지 활용",
+      Objectives: "커스텀 훅 활용,mui를 통한 다크모드 구현,타입스크립트 사용 ",
       Feature: "할일 저장 및 완료 표시 및 항목삭제",
       skill: [html, css, js],
     },
@@ -137,8 +140,8 @@ const work = [
     url: "https://silo9506.github.io/movie-api-react/",
     git: "https://github.com/silo9506/movie-api-react",
     Description: {
-      title: "영화검색 사이트",
-      Objectives: "오픈api 활용",
+      title: "Rumble move사이트",
+      Objectives: "오픈api 활용하여 영화 검색 사이트 제작",
       Feature: "장르영화 추천 및 영화검색",
       skill: [html, css, js, react],
     },
@@ -149,7 +152,7 @@ const work = [
     git: "https://github.com/silo9506/insta-react",
     Description: {
       title: "인스타그램",
-      Objectives: "NoSQL DB사용",
+      Objectives: "NoSQL DB사용하여 회원가입 및 게시글 작성기능 만들기",
       Feature: "회원가입, auth권한을 통한 파일 업로드 및 삭제",
       skill: [html, css, js, react, firebase],
     },
@@ -160,7 +163,8 @@ const work = [
     git: "https://github.com/silo9506/youtube-redux-react",
     Description: {
       title: "유튜브",
-      Objectives: "api활용, redux활용",
+      Objectives:
+        "api를 활용하여 검색 및 동영상 재생사이트 제작, redux를 사용하여 상태관리",
       Feature: "동영상 검색 및 시청",
       skill: [html, css, js, redux, react],
     },

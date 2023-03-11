@@ -117,12 +117,12 @@ const App = () => {
         </Background>
         <Background toggle={toggle}>
           <div className="content">
-            <About />
+            <Project />
           </div>
         </Background>
         <Background toggle={toggle}>
           <div className="content">
-            <Project />
+            <About />
           </div>
         </Background>
       </Sections>
@@ -159,7 +159,11 @@ const Background = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     padding-left: ${({ toggle }) => (toggle ? "12.5rem" : "70px")};
+    @media screen and (max-width: 600px) {
+      padding-left: unset;
+    }
   }
 
   &:first-child {
@@ -221,5 +225,14 @@ const ToggleBtn = styled.div`
     fill: white;
     width: 100%;
     height: 100%;
+  }
+  &:hover {
+    svg path {
+      fill: red;
+      transition: fill ease-in 1s;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    display: none;
   }
 `;

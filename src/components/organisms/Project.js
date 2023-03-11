@@ -125,8 +125,8 @@ const Container = styled.div`
   border-radius: 10%;
   position: relative;
   background-color: #453b36;
-  @media screen and (max-width:600px) {
-    max-width:270px;
+  @media screen and (max-width: 925px) {
+    max-width: 550px;
   }
 `;
 const CarouselWrapper = styled.div`
@@ -136,6 +136,7 @@ const CarouselWrapper = styled.div`
 
 const Carousel = styled.div`
   width: 100%;
+  cursor: move;
   height: 100%;
   display: flex;
   transition: ${({ trans }) => trans && "0.3s"};
@@ -154,10 +155,12 @@ const Btnwrapper = styled.div`
     height: 3rem;
     fill: #ff6363;
   }
-  @media screen and (max-width:600px) {
+  & polygon {
+    cursor: pointer;
+  }
+  @media screen and (max-width: 600px) {
     right: ${({ left }) => (left ? "unset" : "-15%")};
     left: ${({ left }) => (left ? "-15%" : "unset")};
-
   }
 `;
 
