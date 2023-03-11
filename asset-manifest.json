@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.1b350a9c.js",
+    "main.js": "/portfolio/static/js/main.74595f15.js",
     "static/media/movies.png": "/portfolio/static/media/movies.23376ffc13239371d354.png",
     "static/media/youtube.PNG": "/portfolio/static/media/youtube.375ed0d230cfd4bcbb19.PNG",
     "static/media/fullpage.png": "/portfolio/static/media/fullpage.439747f5600e2b542d5d.png",
     "static/media/profile04.jpg": "/portfolio/static/media/profile04.7840a7417c96fdeb3fa6.jpg",
-    "static/media/todos.PNG": "/portfolio/static/media/todos.c64d0f1b551cb6fa82f5.PNG",
+    "static/media/todos.PNG": "/portfolio/static/media/todos.8e5559b51993f291e5bb.PNG",
     "static/media/firebase.png": "/portfolio/static/media/firebase.5aa7cf22cd45ec6bbec2.png",
     "static/media/instar.PNG": "/portfolio/static/media/instar.299afe2e20d51f1969df.PNG",
     "static/media/html.png": "/portfolio/static/media/html.f3aa7827cd5160f3fc1c.png",
@@ -14,18 +14,18 @@
     "static/media/js.png": "/portfolio/static/media/js.166865dacb77d214f485.png",
     "static/media/react.png": "/portfolio/static/media/react.20adfb35ae6a6e5817bf.png",
     "static/media/skill.svg": "/portfolio/static/media/skill.d57d67dce98744764607f8c0e16e100a.svg",
-    "index.html": "/portfolio/index.html",
     "static/media/hamburger.svg": "/portfolio/static/media/hamburger.b778cb1777612594612f0bf2e4ff8477.svg",
     "static/media/introduce.svg": "/portfolio/static/media/introduce.8d2f7c1a21b62b23df3ca0cdfa152b28.svg",
     "static/media/profile.svg": "/portfolio/static/media/profile.74c7b3398f447ad26aac5bfd05b050e7.svg",
+    "index.html": "/portfolio/index.html",
     "static/media/arrow-left.svg": "/portfolio/static/media/arrow-left.e5c5bcc0af55dac6f8acdeaff8ee496a.svg",
     "static/media/arrow-right.svg": "/portfolio/static/media/arrow-right.0670c75e9fc45680440d2bc3a04b5339.svg",
     "static/media/contact.svg": "/portfolio/static/media/contact.a6845823580be85b8e2bd04609d6f277.svg",
     "static/media/x.svg": "/portfolio/static/media/x.966385ad24b6981b7364955758caf367.svg",
     "static/media/arrow-down.svg": "/portfolio/static/media/arrow-down.93e92c1b6956e8c770bf0d17bd83b5ba.svg",
-    "main.1b350a9c.js.map": "/portfolio/static/js/main.1b350a9c.js.map"
+    "main.74595f15.js.map": "/portfolio/static/js/main.74595f15.js.map"
   },
   "entrypoints": [
-    "static/js/main.1b350a9c.js"
+    "static/js/main.74595f15.js"
   ]
 }
