@@ -47,11 +47,18 @@ const Introduce = () => {
   };
 
   const onMouseDown = (e) => {
-    e.preventDefault();
-    let pageX = e.pageX;
-    setIsDrag(true);
-    setStart(pageX);
-    pageX = null;
+    if (e._reactName === "onTouchStart") {
+      let pageX = e.touches[0].clientX;
+      setIsDrag(true);
+      setStart(pageX);
+      pageX = null;
+    } else {
+      e.preventDefault();
+      let pageX = e.pageX;
+      setIsDrag(true);
+      setStart(pageX);
+      pageX = null;
+    }
   };
 
   const onMouseLeave = (e) => {
@@ -69,24 +76,44 @@ const Introduce = () => {
   };
 
   const onMouseUp = (e) => {
-    if (transX > 150) {
-      // console.log("200보다 큼");
-      onClickDown(null);
+    if (e._reactName === "onTouchEnd") {
+      if (transX > 150) {
+        // console.log("200보다 큼");
+        onClickDown(null);
+      }
+      if (transX < -150) {
+        // console.log("200보다 작음");
+        onClickUp(null);
+      }
+      setIsDrag(false);
+      setTransX(0);
+    } else {
+      if (transX > 150) {
+        // console.log("200보다 큼");
+        onClickDown(null);
+      }
+      if (transX < -150) {
+        // console.log("200보다 작음");
+        onClickUp(null);
+      }
+      e.preventDefault();
+      setIsDrag(false);
+      setTransX(0);
     }
-    if (transX < -150) {
-      // console.log("200보다 작음");
-      onClickUp(null);
-    }
-    e.preventDefault();
-    setIsDrag(false);
-    setTransX(0);
   };
 
   const onMouseMove = (e) => {
     if (!isDrag) return;
-    let pageX = -start + e.pageX;
-    setTransX(pageX);
-    pageX = null;
+    if (e._reactName === "onTouchMove") {
+      let pageX = -start + e.touches[0].clientX;
+      setTransX(pageX);
+      console.log(pageX);
+      pageX = null;
+    } else {
+      let pageX = -start + e.pageX;
+      setTransX(pageX);
+      pageX = null;
+    }
   };
 
   return (
@@ -101,6 +128,9 @@ const Introduce = () => {
           onMouseLeave={onMouseLeave}
           onMouseUp={onMouseUp}
           onMouseMove={onMouseMove}
+          onTouchMove={onMouseMove}
+          onTouchStart={onMouseDown}
+          onTouchEnd={onMouseUp}
         >
           {work.map((works, index) => (
             <Work key={index} works={works} />

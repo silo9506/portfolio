@@ -1,5 +1,5 @@
 import Home from "components/organisms/Home";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { scrollReducerAction } from "./modules/scrollReducer";
@@ -20,6 +20,7 @@ const App = () => {
 
   const { setMaxPage, onScroll, onThrottle } = scrollReducerAction;
   const dispatch = useDispatch();
+  const [prevTouchY, setPrevTouchY] = useState(null);
 
   useEffect(() => {
     init();
@@ -90,16 +91,33 @@ const App = () => {
   };
 
   const handleScroll = useThrottle((e) => {
-    let delta = e.deltaY;
-    if (delta < 0) {
-      scrollUp();
+    if (e._reactName === "onTouchEnd") {
+      const currTouchY = e.changedTouches[0].pageY;
+      if (prevTouchY !== null) {
+        const deltaY = currTouchY - prevTouchY;
+        if (deltaY > 150) {
+          scrollUp();
+        } else if (deltaY < -150) {
+          scrollDown();
+        }
+      }
+      setPrevTouchY(null);
     } else {
-      scrollDown();
+      let delta = e.deltaY;
+      if (delta < 0) {
+        scrollUp();
+      } else {
+        scrollDown();
+      }
     }
   }, 1000);
 
   return (
-    <Container onWheel={handleScroll}>
+    <Container
+      onWheel={handleScroll}
+      onTouchStart={(e) => setPrevTouchY(e.touches[0].clientY)}
+      onTouchEnd={handleScroll}
+    >
       <ToggleBtn toggle={toggle} onClick={() => dispatch(onToggle())}>
         {toggle ? <X /> : <Hamburger />}
       </ToggleBtn>
