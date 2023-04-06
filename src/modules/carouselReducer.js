@@ -24,12 +24,12 @@ const work = [
   },
   {
     img: movies,
-    url: "https://silo9506.github.io/movie-api-react/",
-    git: "https://github.com/silo9506/movie-api-react",
+    url: "https://silo9506.github.io/movieAndBook/",
+    git: "https://github.com/silo9506/movieAndBook",
     Description: {
-      title: "Rumble move사이트",
-      Objectives: "오픈api 활용하여 영화 검색 사이트 제작",
-      Feature: "장르영화 추천 및 영화검색",
+      title: "M&B 영화 및 도서검색사이트",
+      Objectives: "무한스크롤 및 페이지네이션을통한 영화 및 북 검색 및 탐색",
+      Feature: "영화 및 도서 검색",
       skill: [html, css, js, react],
     },
   },
@@ -39,8 +39,7 @@ const work = [
     git: "https://github.com/silo9506/insta-react",
     Description: {
       title: "인스타그램",
-      Objectives:
-        "NoSQL DB사용하여 회원가입 및 게시글 작성기능 만들기하여 회원가입 및 게시글 작성기능 만들기",
+      Objectives: "NoSQL DB사용하여 회원가입 및 게시글 작성기능 만들기하여 회원가입 및 게시글 작성기능 만들기",
       Feature: "회원가입, auth권한을 통한 파일 업로드 및 삭제",
       skill: [html, css, js, react, firebase],
     },
@@ -51,8 +50,7 @@ const work = [
     git: "https://github.com/silo9506/youtube-redux-react",
     Description: {
       title: "유튜브",
-      Objectives:
-        "api를 활용하여 검색 및 동영상 재생사이트 제작, redux를 사용하여 상태관리",
+      Objectives: "api를 활용하여 검색 및 동영상 재생사이트 제작, redux를 사용하여 상태관리",
       Feature: "동영상 검색 및 시청",
       skill: [html, css, js, redux, react],
     },
@@ -81,12 +79,12 @@ const work = [
   },
   {
     img: movies,
-    url: "https://silo9506.github.io/movie-api-react/",
-    git: "https://github.com/silo9506/movie-api-react",
+    url: "https://silo9506.github.io/movieAndBook/",
+    git: "https://github.com/silo9506/movieAndBook",
     Description: {
-      title: "Rumble move사이트",
-      Objectives: "오픈api 활용하여 영화 검색 사이트 제작",
-      Feature: "장르영화 추천 및 영화검색",
+      title: "M&B 영화 및 도서검색사이트",
+      Objectives: "무한스크롤 및 페이지네이션을통한 영화 및 북 검색 및 탐색",
+      Feature: "영화 및 도서 검색",
       skill: [html, css, js, react],
     },
   },
@@ -107,8 +105,7 @@ const work = [
     git: "https://github.com/silo9506/youtube-redux-react",
     Description: {
       title: "유튜브",
-      Objectives:
-        "api를 활용하여 검색 및 동영상 재생사이트 제작, redux를 사용하여 상태관리",
+      Objectives: "api를 활용하여 검색 및 동영상 재생사이트 제작, redux를 사용하여 상태관리",
       Feature: "동영상 검색 및 시청",
       skill: [html, css, js, redux, react],
     },
@@ -137,12 +134,12 @@ const work = [
   },
   {
     img: movies,
-    url: "https://silo9506.github.io/movie-api-react/",
-    git: "https://github.com/silo9506/movie-api-react",
+    url: "https://silo9506.github.io/movieAndBook/",
+    git: "https://github.com/silo9506/movieAndBook",
     Description: {
-      title: "Rumble move사이트",
-      Objectives: "오픈api 활용하여 영화 검색 사이트 제작",
-      Feature: "장르영화 추천 및 영화검색",
+      title: "M&B 영화 및 도서검색사이트",
+      Objectives: "무한스크롤 및 페이지네이션을통한 영화 및 북 검색 및 탐색",
+      Feature: "영화 및 도서 검색",
       skill: [html, css, js, react],
     },
   },
@@ -163,8 +160,7 @@ const work = [
     git: "https://github.com/silo9506/youtube-redux-react",
     Description: {
       title: "유튜브",
-      Objectives:
-        "api를 활용하여 검색 및 동영상 재생사이트 제작, redux를 사용하여 상태관리",
+      Objectives: "api를 활용하여 검색 및 동영상 재생사이트 제작, redux를 사용하여 상태관리",
       Feature: "동영상 검색 및 시청",
       skill: [html, css, js, redux, react],
     },
